@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Test gotip
+    steps:
+      - uses: actions/checkout@v2
+      - id: test
+        uses: ./
+        with:
+          branch: 'master'
